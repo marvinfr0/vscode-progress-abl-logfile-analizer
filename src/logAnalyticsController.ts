@@ -24,7 +24,7 @@ class TimePeriodController {
         vscode.window.onDidChangeActiveTextEditor(this._onEvent, this, subscriptions);
 
         // update the counter for the current file
-        this.searchSynthom(this._statusBarItem);
+        this.searchSynthom();
 
         // create a combined disposable from both event subscriptions
         this._disposable = vscode.Disposable.from(...subscriptions);
@@ -35,24 +35,15 @@ class TimePeriodController {
         this._disposable.dispose();
     }
 
-    public searchSynthom(statusBarItem: StatusBarItem) {
+    public searchSynthom() {
 
         // Get the current text editor
         const editor = vscode.window.activeTextEditor;
-        if (!editor) {
-            this._statusBarItem.hide();
-            return;
-        }
 
         const doc = editor.document;
 
-        let text = this._logSynthom.analytics(doc.getText(editor.selection));
-        this._statusBarItem.text = text;
-        this._statusBarItem.show();
-
-
-
-
+        let text = this._logSynthom.analytics(doc.getText());
+        return text;
         // // Only update status if an log file
         // if (doc.languageId === 'log') {
 
@@ -75,7 +66,7 @@ class TimePeriodController {
     }
 
     private _onEvent() {
-        this.searchSynthom(this._statusBarItem);
+        this.searchSynthom();
     }
 }
 

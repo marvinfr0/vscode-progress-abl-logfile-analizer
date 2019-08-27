@@ -36,7 +36,7 @@ class TimePeriodController {
     }
 
     public updateTimePeriod(statusBarItem: StatusBarItem) {
-
+/*
         // Get the current text editor
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
@@ -65,6 +65,7 @@ class TimePeriodController {
         } else {
             this._statusBarItem.hide();
         }
+        */
     }
 
     private _onEvent() {

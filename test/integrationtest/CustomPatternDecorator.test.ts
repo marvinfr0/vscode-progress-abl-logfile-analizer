@@ -109,7 +109,7 @@ describe('CustomPatternDecorator', () => {
             const vscodeSpy = spyOn(vscode.window.activeTextEditor, 'setDecorations').and.callThrough();
 
             // Act
-            testObject.decorateDocument(mockEvent);
+            //testObject.decorateDocument(mockEvent);
 
             // Assert
             expect(vscodeSpy.calls.count()).toBe(2); // Two calls for two log level.

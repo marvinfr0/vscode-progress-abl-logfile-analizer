@@ -82,7 +82,13 @@
 					"description": "An array of custom patterns that shall be highlighted."
 				}
 			}
-		}
+		},
+		"commands": [
+			{
+				"command": "analyseLog.log",
+				"title": "Analyse Log"
+			}
+		]
 	},
 	"activationEvents": [
 		"onLanguage:log"
@@ -106,6 +112,7 @@
 		"vscode": "^1.1.34"
 	},
 	"dependencies": {
-		"moment": "^2.23.0"
+		"moment": "^2.24.0",
+		"open": "^6.4.0"
 	}
 }

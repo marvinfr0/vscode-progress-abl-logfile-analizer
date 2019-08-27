@@ -37,8 +37,8 @@ class TimePeriodCalculator {
         return text;
     }
 
+    /*
     public getTimePeriod(data: string): moment.Duration {
-
         const selContent = data;
 
         // Clock times with optional timezone ("09:13:16", "09:13:16.323", "09:13:16+01:00", "19:30:47.437+0300")
@@ -110,6 +110,7 @@ class TimePeriodCalculator {
 
         return timePeriod;
     }
+       */
 
     // Converts a given date string to an iso string.
     private _convertToIso(dateString: string): string {
